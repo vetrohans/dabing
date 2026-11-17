@@ -204,7 +204,7 @@ function delConv(id){hideCtx();S.cv=S.cv.filter(function(c){return c.id!==id});i
 function openS(){
   var h='<div class="sp"><div class="sp-h"><button class="ibtn" onclick="closeS()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><span class="sp-t">设置</span><div></div></div><div class="sp-b">';
   h+='<div class="sec"><div class="stitle">模型</div>';
-  h+='<label>API 地址</label><input type="url" value="'+E(S.url)+'" onchange="S.url=this.value.trim();P()" placeholder="/api"><div class="hint">默认 /api 走 Cloudflare 代理；也可填兼容接口的 /v1 地址。</div>';
+  h+='<label>API 地址</label><input type="url" value="'+E(S.url)+'" onchange="S.url=this.value.trim();P()" placeholder="/api"><div class="hint">默认走 Cloudflare 代理；也可填兼容接口的 /v1 地址。</div>';
   h+='<label>API Key</label><input type="password" value="'+E(S.ak)+'" onchange="S.ak=this.value.trim();P()" placeholder="使用代理时留空"><div class="hint">推荐留空：Key 放在 Cloudflare 环境变量 OPENCODE_API_KEY。</div>';
   h+='<label>模型 ID</label><input type="text" value="'+E(S.md)+'" onchange="S.md=this.value.trim()||DEFAULT_MODEL;P()" list="modelIds" placeholder="deepseek-v4.1-flash"><datalist id="modelIds"><option value="deepseek-v4.1-flash"></option><option value="deepseek-v4-pro"></option><option value="glm-5.3-flash"></option><option value="glm-5.3"></option><option value="kimi-k3"></option><option value="minimax-m3"></option><option value="qwen3.8-max"></option></datalist><div class="hint">按 OpenCode Console 里的模型 ID 填写。</div></div>';
   h+='<div class="sec"><div class="stitle">对话</div>';
